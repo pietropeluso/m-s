@@ -1,0 +1,19 @@
+How to use:
+
+1. installation of node.js from their website
+
+2. grunt-cli installation
+> sudo npm install -g grunt-cli
+
+3. bower installation
+> sudo npm install -g bower
+
+4. installing all dependencies of the application, so from the root dir of the app execute the following command
+> npm install
+> bower install
+
+5. run the application in development mode
+> grunt serve
+
+6. or run the application in production mode (code minification)
+> grunt serve:dist
