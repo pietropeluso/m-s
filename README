@@ -15,5 +15,5 @@ How to use:
 5. run the application in development mode
 > grunt serve
 
-6. or run the application in production mode (code minification)
+6. or run the application in production mode (code optimization)
 > grunt serve:dist
