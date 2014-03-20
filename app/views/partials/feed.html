@@ -1,0 +1,30 @@
+<label>Filter by Category</label>
+<select name="" id="" ng-model="category">
+  <option value="all" selected>All</option>
+  <option value="beauty">Beauty</option>
+  <option value="flowers_and_gifts">Flowers &amp; Gifts</option>
+  <option value="food_and_wine">Food &amp; Wine</option>
+  <option value="home">Home</option>
+  <option value="kids">Kids</option>
+  <option value="men">Men</option>
+  <option value="women">Women</option>
+</select>
+
+<div class="row marketing">
+  <table class="table">
+    <thead>
+      <th><a href="" ng-click="predicate='Item';direction=!direction">Item</a></th>
+      <th><a href="" ng-click="predicate='Category';direction=!direction">Category</a></th>
+      <th><a href="" ng-click="predicate='SubCategory';direction=!direction">Sub Category</a></th>
+      <th><a href="" ng-click="predicate='Price';direction=!direction">Price</a></th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in items | orderBy:predicate:direction" ng-show="categorySelected(item.Category)">
+        <td>{{item.Item}}</td>
+        <td>{{item.Category}}</td>
+        <td>{{item.SubCategory}}</td>
+        <td>{{item.Price | currency:'£'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
